@@ -1,0 +1,64 @@
+[2023-06-13 17:56:52.080] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-13 17:56:54.805] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-13 17:56:59.721] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-13 17:56:59.722] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:51645
+[2023-06-13 17:57:33.730] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-13 17:57:36.455] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-13 17:57:39.514] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-13 17:57:39.515] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:56401
+[2023-06-14 12:24:17.708] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 12:24:20.438] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 12:24:23.655] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 12:24:23.656] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:49801
+[2023-06-14 13:47:58.862] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 13:48:01.589] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 13:48:04.742] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 13:48:04.742] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:44041
+[2023-06-14 13:50:54.210] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 13:50:56.945] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 13:51:00.014] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 13:51:00.015] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:52387
+[2023-06-14 14:01:42.489] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 14:01:45.230] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 14:01:48.257] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 14:01:48.258] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:58111
+[2023-06-14 14:14:29.920] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 14:14:32.643] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 14:14:35.717] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 14:14:35.717] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:39113
+[2023-06-14 14:29:06.468] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 14:29:09.197] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 14:29:14.087] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 14:29:14.087] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:33871
+[2023-06-14 14:57:01.723] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 14:57:04.443] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 14:57:07.630] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 14:57:07.631] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:54389
+[2023-06-14 14:58:59.424] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 14:59:02.156] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 14:59:05.619] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 14:59:05.619] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:59379
+[2023-06-14 15:02:18.376] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 15:02:21.109] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 15:02:24.162] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 15:02:24.162] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:56629
+[2023-06-14 15:03:56.885] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 15:03:59.612] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 15:04:02.974] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 15:04:02.975] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:33201
+[2023-06-14 15:04:36.453] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 15:04:39.174] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 15:04:42.354] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 15:04:42.355] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:54337
+[2023-06-14 15:12:11.324] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 15:12:14.045] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 15:12:17.224] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 15:12:17.225] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:36153
+[2023-06-14 15:13:49.370] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-14 15:13:52.102] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-14 15:13:56.002] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-14 15:13:56.003] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:38297
+[2023-06-19 15:15:24.043] [Speck2eTestBoard] [info] Speck 2e test board initialized.
+[2023-06-19 15:15:26.784] [Speck2eTestBoard] [info] Speck 2e model initialized.
+[2023-06-19 15:15:30.003] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:40005
+[2023-06-19 15:15:30.003] [ZMQ] [info] ZMQPublisher set endpoint: tcp://0.0.0.0:34385
