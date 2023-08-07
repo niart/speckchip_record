@@ -33,9 +33,3 @@ if __name__ == '__main__':
     controller.start_camera(input_device_name)
     # Run the controller
     controller.run()
-
-
-
-
-
-

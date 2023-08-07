@@ -4,6 +4,7 @@ from multiprocessing import Process
 import time
 from threading import Thread
 import matplotlib.pyplot as plt
+import csv
 
 
 class SamnaGraphBuilder:
@@ -24,6 +25,7 @@ class SamnaGraphBuilder:
             samna.BasicSinkNode_dynapcnn_event_output_event()
         )  # receive the spike events
     # looking for device with name "device_name" defined in main file
+
     def open_device(self):
         devices = samna.device.get_unopened_devices()
         device_names = [each.device_type_name for each in devices]
@@ -85,6 +87,7 @@ class SamnaGraphBuilder:
 
     # buffer to print events in the terminal
     # we can use this function to send commands to the motor
+    '''
     def add_buf_to_print(self):
         buf = samna.graph.sink_from(self.devkit.get_model_source_node())
         def record():
@@ -93,17 +96,46 @@ class SamnaGraphBuilder:
                 b = buf.get_events()
                 for e in b:
                     if hasattr(e, "y"):
+                        print(e)
                         print("output event: ", "layer " + str(e.layer) + " x: " + str(e.x) + " y: " + str(e.y))
         t1 = Thread(target=record)
         t1.setDaemon(True)
         t1.start()
 
-
+    '''
     def start_samna_node(self):
         samna_node = samna.init_samna()
         time.sleep(1)
         return samna_node
+    
 
+    # ... (other methods remain the same)
+
+    def add_buf_to_print(self):
+        buf = samna.graph.sink_from(self.devkit.get_model_source_node())
+
+        def record():
+            while True:
+                time.sleep(1)
+                b = buf.get_events()
+                for e in b:
+                    if hasattr(e, "y"):
+                        print(e)
+                        self.save_event_to_csv(e)
+
+        t1 = Thread(target=record)
+        t1.setDaemon(True)
+        t1.start()
+
+    def save_event_to_csv(self, event):
+        filename = "record.csv"
+        with open(filename, mode="a", newline="") as file:
+            writer = csv.writer(file)
+            if not hasattr(self, "csv_header_written"):
+                writer.writerow(["t", "x", "y", "p"])
+                self.csv_header_written = True
+
+            writer.writerow([event.timestamp, event.x, event.y, event.feature])
 
 ###########define the visualizer #######################################################################################
 class SamnaVisualizer:
@@ -144,8 +176,8 @@ class SamnaConfigure:
             self.devkit_config.dvs_filter.enable = True
             self.devkit_config.dvs_filter.hot_pixel_filter_enable = True # hot pixels are pixels which are always active
             self.devkit_config.dvs_filter.threshold = 1
-            self.devkit_config.dvs_layer.monitor_enable = False
-            self.devkit_config.dvs_layer.raw_monitor_enable = False
+            self.devkit_config.dvs_layer.monitor_enable = True
+            self.devkit_config.dvs_layer.raw_monitor_enable = True
         elif self.device_name == "DynapcnnDevKit":
             self.devkit_config = samna.dynapcnn.configuration.DynapcnnConfiguration()
 
@@ -159,15 +191,15 @@ class SamnaConfigure:
     def davis_and_speck(self, out_layer, network):
         self.devkit_config = network.make_config(device="speck2edevkit:0")
         new_out_channel = (out_layer - 1) * 4 + 1
-        self.devkit_config.cnn_layers[new_out_channel].monitor_enable = True
+        self.devkit_config.cnn_layers[new_out_channel].monitor_enable = False
         self.devkit_config.dvs_layer.destinations[0].enable = True
         self.devkit_config.dvs_layer.destinations[0].layer = network.chip_layers_ordering[0]
         if self.input_device_name == "None":
             self.devkit_config.dvs_layer.mirror_diagonal = True
         # link the dvs layer to the 1st layer of the cnn layers
         self.devkit_config.dvs_layer.merge = False
-        self.devkit_config.dvs_layer.monitor_enable = False  # let it output dvs events
-        self.devkit_config.dvs_layer.raw_monitor_enable = False
+        self.devkit_config.dvs_layer.monitor_enable = True  # let it output dvs events
+        self.devkit_config.dvs_layer.raw_monitor_enable = False   ##### This one cannot be changed to True otherwise cannot print layer!!!  -- Ni Wang
 
         self.devkit.get_model().apply_configuration(self.devkit_config)
 
@@ -176,7 +208,7 @@ class SamnaConfigure:
         self.devkit_config.cnn_layers[out_layer].monitor_enable = True
         self.devkit_config.dvs_layer.destinations[0].enable = True
         self.devkit_config.dvs_layer.destinations[0].layer = network.chip_layers_ordering[0]
-        self.devkit_config.dvs_layer.monitor_enable = False  # let it output dvs events
+        self.devkit_config.dvs_layer.monitor_enable = True  # let it output dvs events
         self.devkit_config.factory_settings.monitor_input_enable = False
 
 
@@ -260,6 +292,3 @@ class SamnaController:
 
     def run(self):
         self
-
-
-
