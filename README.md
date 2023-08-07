@@ -1,7 +1,7 @@
 # speckchip_record
 ## This program allows speck chip to read frames from event camera and saves a dataset. 
 
-Steps of using this program:
+### Steps of using this program:
 
 0. Make a file in ```/etc/udev/rules.d``` named ```60-synsense.rules``` which contains the following:
 ```
