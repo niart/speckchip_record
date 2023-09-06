@@ -1,5 +1,5 @@
 # speckchip_record
-## This program allows speck chip to read frames from event camera and saves a dataset. 
+## This program allows speck chip to read streams from event camera and saves a dataset. 
 
 ### Steps of using this program:
 
